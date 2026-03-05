@@ -1,0 +1,168 @@
+@font-face {
+      font-family: custom_call;
+      src: url(./font/IRANYekanWebMedium.woff2);
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: 'custom_call';
+      src: url(./font/IRANYekanWebBold.woff2);
+      font-weight: bold;
+    }
+
+    .call_box {
+      font-family: 'custom_call' !important;
+      font-weight: normal;
+    }
+.call_item_icon img{
+        width: 33px;
+    max-width: 33px;
+}
+    .call_box .call_button {
+      width: 70px;
+      position: fixed;
+      right: 2%;
+      bottom: 35px;
+      z-index: 9999;
+      height: 70px;
+      border-radius: 50px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 6px 8px 2px rgb(0 0 0 / 14%);
+    }
+
+    .pluser {
+      animation: pulser 2s infinite;
+    }
+
+    .noselect {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .call_button svg {
+      max-width: 24px;
+      display: block;
+      margin: 1px auto -4px;
+      color: #fff;
+    }
+	
+	.call_main .call_item_icon{
+		color: #fff;
+		padding: 10px;
+		display: grid;
+		place-content: center;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+	}
+	.call_main svg{
+		height: 32px;
+		width: 32px;
+	}
+    .call_box .call_button span.title_caller {
+      font-size: 10px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .call_box .call_button .dw-close-caller {
+      line-height: 17px;
+      font-weight: 600;
+      display: none;
+    }
+    .call_box .call_main {
+    position: fixed;
+    right: 2%;
+    background: #fff;
+    box-shadow: 0 3px 8px 0 rgb(0 0 0 / 20%);
+    border-radius: 8px;
+    width: 277px;
+    z-index: 99999999;
+    font-size: 12px;
+    transition: all 120ms ease-out;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 0;
+}
+.call_box .call_main.showe {
+    visibility: visible;
+    opacity: 1;
+    bottom: 120px;
+    transition: all 190ms ease-out;
+}
+.call_box .call_main ul{
+  padding: 10px;
+	    margin: 0;
+}
+.call_box .call_main ul li {
+    line-height: 2em;
+    font-size: 14px;
+    list-style-type: none;
+
+}
+.call_box .call_main ul li a {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: rtl;
+    text-decoration: none;
+    color: #1c1c1c;
+    background: #eaeaea;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.call_box .call_main ul li:last-child a {
+    margin-bottom: 0;
+}
+.dw-open-caller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+    @keyframes pulser {
+      0% {
+        -moz-box-shadow: 0 0 0 0 #3030306b;
+            box-shadow: 0 0 0 0 #3030306b;
+      }
+
+      70% {
+        -moz-box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+      }
+    }
+
+	@media ( max-width:800px ){
+		.call_box .call_button{
+			    right: 5%;
+    			bottom: 70px;
+		}
+		.call_box .call_main.showe {
+    		bottom: 155px;
+		}
+	}
